@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var product_1 = require("./product");
+var ProductServices_1 = require("./ProductServices");
+var _productServices = new ProductServices_1.ProductServices();
+var result;
+result = _productServices.getProducts();
+result = _productServices.getById(3);
+var p = new product_1.Product();
+p.name = "Ps";
+p.price = 1000;
+p.category = "Console";
+_productServices.saveProducts(p);
+//result = _productServices.getProducts();
+_productServices.deleteProducts(result);
+result = _productServices.getProducts();
+console.log(result);
